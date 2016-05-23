@@ -1,0 +1,8 @@
+{
+    "buildPath": "../build",
+    "timeStamp": true,
+    "minify": "all",
+    "merge": {},
+    "exclude": [],
+    "obfuscate": true
+}
