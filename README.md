@@ -5,6 +5,7 @@ This script will help you to make a build out of your html project. In other wor
 
 ##### Requirements #####
 - python 3.x (been tested on python 3.4 and 3.5)
+- [lxml](http://lxml.de/index.html) library
 - [slimit](https://github.com/rspivak/slimit), [ply](http://www.dabeaz.com/ply) and [csscompressor](https://travis-ci.org/sprymix/csscompressor) libraries(included)
 - a build config file.  
 
