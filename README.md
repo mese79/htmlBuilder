@@ -1,13 +1,16 @@
-htmlBuilder
-===========
+**htmlBuilder**
+===============
 
 This script will help you to make a build out of your html project. In other words this will minify and merge all of your javascript and css files by running a command. Also the built html file will be modified to have new links to the minified/merged files.
+
+<br>
 
 ##### Requirements #####
 - python 3.x (been tested on python 3.4 and 3.5)
 - [lxml](http://lxml.de/index.html) library
 - [slimit](https://github.com/rspivak/slimit), [ply](http://www.dabeaz.com/ply) and [csscompressor](https://travis-ci.org/sprymix/csscompressor) libraries(included)
 - a build config file.  
+<br>
 
 ##### Config file #####
 Build config file is a json file which specifies how js and css files should get minified and merged.
@@ -38,8 +41,17 @@ For exmple:
 - use `*` at the end of the path to include all files in a directory 
 - use `**` at the end of a path to include all files in a directory and all sub-directories of that directory.
 - If you have an already minified file in your path, file name must end to `.min.js` or `.min.css`. Else it will be minified again by the script. in that case probably it will fail.
+<br><br>
 
 ##### Commandline #####
     python html_builder.py -c path/to/config-file.json path/to/index.html
     # for commandline help see:
     python html_builder.py --help
+<br><br>
+
+###### **Donation** ######
+If you like it please donate:
+
+**bitcoin:**  1FEwbyrvsum1oaeBAmtx3MCUJGuKbKuYWi
+
+![QR-image](http://mese79.persiangig.com/document/my-wallet.png)
