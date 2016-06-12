@@ -47,12 +47,4 @@ For exmple:
     python html_builder.py -c path/to/config-file.json path/to/index.html
     # for commandline help see:
     python html_builder.py --help
-<br><br>
-
-###### **Donation** ######
-If you like it please donate:
-
-**bitcoin:**  1FEwbyrvsum1oaeBAmtx3MCUJGuKbKuYWi
-
-![QR-image](http://mese79.persiangig.com/document/my-wallet.png)
 
