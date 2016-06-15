@@ -74,9 +74,9 @@ def main():
 
 def build(input_file, configs):
     # Making build folder
-    build_name = configs["buildPath"] + configs["timeStamp"]
+    build_name = os.path.normpath(configs["buildPath"] + configs["timeStamp"])
     base_dir = os.path.abspath(os.path.dirname(input_file))
-    build_dir = os.path.normpath(os.path.join(base_dir, build_name))
+    build_dir = os.path.join(base_dir, build_name)
     os.makedirs(build_dir, exist_ok=True)
 
     # Getting list of excluded files:
@@ -102,6 +102,9 @@ def build(input_file, configs):
             file_path = os.path.join(root, file)
             # If file was already part of a merge process:
             if file_path in merged_files or file_path in excludes:
+                continue
+
+            if is_min_file_exists(file, file_path):
                 continue
 
             os.makedirs(dest, exist_ok=True)
@@ -258,6 +261,13 @@ def get_files(base_dir, paths, ext="*"):
 
 def is_min_file(fname):
     return (".min.js" in fname or ".min.css" in fname)
+
+def is_min_file_exists(file, path):
+    dir = os.path.dirname(path)
+    namext = os.path.splitext(file)
+    min_file = os.path.join(dir, namext[0] + ".min" + namext[1])
+
+    return os.path.exists(min_file)
 
 
 
